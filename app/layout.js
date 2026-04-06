@@ -20,6 +20,9 @@ export const metadata = {
   creator: "Omer Salah",
   publisher: "VE Artz",
   metadataBase: new URL("https://ve-arts.vercel.app"),
+  icons: {
+    icon: { url: "/logo-dark.jpg", type: "image/jpg" },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -69,6 +72,9 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={lang} dir={dir} suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/logo-dark.jpg" />
+      </head>
       <body className="antialiased site-grid">
         <ThemeProvider
           attribute="data-theme"
