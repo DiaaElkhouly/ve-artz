@@ -11,7 +11,7 @@ export default function ClientCard({ clientId, lang, variant = "teaser" }) {
   const isArabic = lang === "ar";
   const mediaSrc = client.image[0];
   const isVideo =
-    typeof mediaSrc === "string" && /\.(mp4|webm|ogg)$/i.test(mediaSrc);
+    typeof mediaSrc === "string" && /\.(mp4|webm|ogg|m4v)$/i.test(mediaSrc);
 
   const baseClasses =
     "group relative overflow-hidden rounded-3xl bg-[color:var(--surface-2)] border border-[color:color-mix(in oklab, var(--border) 60%, transparent)] shadow-xl transition-all duration-500 ease-out hover:-translate-y-2 hover:border-[color:color-mix(in oklab, var(--accent) 50%, transparent)] hover:shadow-[0_30px_80px_-40px_rgba(0,0,0,0.85)]";
@@ -20,7 +20,7 @@ export default function ClientCard({ clientId, lang, variant = "teaser" }) {
     return (
       <Link
         scroll={true}
-        href={`/clients/${client.slug}`}
+        href={`/${lang}/clients/${client.slug}`}
         className={`${baseClasses} h-70 sm:h-88 md:h-150 w-full  cursor-pointer`}
       >
         <div className="absolute inset-0">

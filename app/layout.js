@@ -7,7 +7,7 @@ export const metadata = {
     default: "VE Artz || OMVR SALAH",
     template: "%s | VE Artz",
   },
-  description: `Omer Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories with cinematic rhythm and refined design.`,
+  description: `Omar Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories with cinematic rhythm and refined design.`,
   keywords: [
     "video editing",
     "visual architecture",

@@ -53,7 +53,7 @@ export default function ClientsPage() {
       <main className="pt-16">
         {/* Back to home button with hover animations */}
         <div className="flex justify-start px-2 pt-5 sm:px-10 sm:pt-10">
-          <Link href={"/"} className="group">
+          <Link href={`/${lang}`} className="group">
             <button
               className="group-hover:scale-[1.05] group-hover:-translate-y-0.5 group-hover:shadow-lg group-hover:shadow-[color:var(--accent)]/20 group-hover:border-[color:color-mix(in oklab, var(--accent) 70%, transparent)] active:scale-[0.97] active:shadow-md rounded-xl border border-[color:var(--border)] p-4 backdrop-blur-sm bg-[color:var(--surface-95)]/80 transition-all duration-300 ease-out flex items-center gap-2 font-semibold uppercase tracking-[0.2em] text-sm hover:bg-[color:var(--surface-2)]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--surface)]"
               type="button"
@@ -63,7 +63,7 @@ export default function ClientsPage() {
                 size={20}
                 className="group-hover:translate-x-[-2px] transition-transform duration-300"
               />
-              <span>Home</span>
+              <span>{lang == "ar" ? "الرئيسية" : "Home"}</span>
             </button>
           </Link>
         </div>

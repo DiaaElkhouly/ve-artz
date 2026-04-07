@@ -40,7 +40,7 @@ export default function HomePage() {
 
   // const grouped = getGroupedProjects(); // no longer used
   return (
-    <>
+    <div className="scroll-smooth">
       <InitialLoader lang={lang} />
       <Navbar lang={lang} onLangChange={handleLangChange} />
       <main className="">
@@ -52,6 +52,6 @@ export default function HomePage() {
         <Contact lang={lang} />
         <CustomCursor />
       </main>
-    </>
+    </div>
   );
 }

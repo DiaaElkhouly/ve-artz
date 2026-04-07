@@ -50,9 +50,11 @@ export default function CustomCursor() {
     };
   }, []);
 
-  return <div ref={cursorRef} className="custom-cursor" aria-hidden />;
+  return (
+    <div
+      ref={cursorRef}
+      className="custom-cursor hidden md:block"
+      aria-hidden
+    />
+  );
 }
-
-
-
-

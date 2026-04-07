@@ -12,10 +12,10 @@ import {
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-export default function Footer({ lang = "en" }) {
+export default function Footer({ lang }) {
   const { theme } = useTheme();
   const year = new Date().getFullYear();
-  const isArabic = lang === "ar";
+  const isArabic = lang == "ar";
 
   const links = isArabic
     ? [
@@ -95,17 +95,22 @@ export default function Footer({ lang = "en" }) {
               ? "نحوّل الأفكار إلى محتوى بصري احترافي بإيقاع سينمائي ولمسة تصميم دقيقة."
               : "We shape ideas into polished visual stories with cinematic rhythm and refined design."}
           </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl">
+            {lang === "ar"
+              ? "اشعر بالرؤية - اشعر بالفنون"
+              : "Feel the Vision - Feel the Artz"}
+          </p>
         </div>
 
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)]">
             {isArabic ? "روابط سريعة" : "Quick Links"}
           </p>
-          <div className="mt-4 gap-4 sm:gap-2 px-2 text-sm text-[color:var(--text)] group/link-container w-fit flex flex-wrap sm:grid">
+          <div className="mt-4 gap-2 px-2 text-sm text-[color:var(--text)] group/link-container w-fit flex flex-wrap sm:grid">
             {links.map((link) => (
               <Link
                 key={link.href}
-                href={`/${link.href}`}
+                href={`/${lang}/${link.href}`}
                 className="group/link relative inline-flex items-center py-1 px-2 rounded-md hover:text-[color:var(--accent)] hover:scale-[1.05] transition-all duration-300 ease-out hover:shadow-[0_4px_12px_rgba(127,184,184,0.25)] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-[rgb(var(--accent))] hover:after:transition-all hover:after:duration-300"
               >
                 {link.label}

@@ -47,7 +47,7 @@ export default function HomePage() {
         <ClientsGrid lang={lang} />
         <About lang={lang} />
         <Contact lang={lang} />
-        <CustomCursor />
+        <CustomCursor  />
       </main>
     </>
   );

@@ -35,14 +35,16 @@ export default function ClientPage({ lang }) {
 
   const clientMedia = clientData.image || [];
   const clientVideos = clientMedia.filter(
-    (media) => typeof media === "string" && /\.(mp4|webm|ogg)$/i.test(media),
+    (media) =>
+      typeof media === "string" && /\.(mp4|webm|ogg|m4v)$/i.test(media),
   );
   const totalMedia = clientMedia.length;
 
   const currentMedia = clientMedia[activeMediaIndex];
 
   const isCurrentVideo =
-    typeof currentMedia === "string" && /.(mp4|webm|ogg)$/i.test(currentMedia);
+    typeof currentMedia === "string" &&
+    /.(mp4|webm|ogg|m4v)$/i.test(currentMedia);
   const mediaLabel = isCurrentVideo ? "Video" : "Image";
 
   return (
@@ -56,21 +58,21 @@ export default function ClientPage({ lang }) {
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative pt-24 pb-16 lg:pb-24 px-6 lg:px-12 xl:px-24 max-w-7xl mx-auto"
+        className="relative pt-24 pb-16 lg:pb-24 px-6 lg:px-12 xl:px-24  mx-auto"
       >
         {/* Back button */}
         <Link
-          href="/clients"
-          className="group mb-12 inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] text-sm font-semibold uppercase tracking-wide text-[color:var(--text-muted)] hover:border-accent/50 hover:text-accent hover:shadow-lg backdrop-blur-sm transition-all duration-400 hover:-translate-y-1"
+          href={`/${lang}/`}
+          className="group mb-2 inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] text-sm font-semibold uppercase tracking-wide text-[color:var(--text-muted)] hover:border-accent/50 hover:text-accent hover:shadow-lg backdrop-blur-sm transition-all duration-400 hover:-translate-y-1"
         >
           <ChevronLeft
             size={20}
             className="group-hover:-translate-x-1 transition-transform"
           />
-          {lang === "ar" ? "جميع العملاء" : "All Clients"}
+          {lang === "ar" ? "الرئيسية" : "Home"}
         </Link>
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-24 items-center">
           {/* Client Info */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -88,13 +90,15 @@ export default function ClientPage({ lang }) {
                 Media Assets
               </div>
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex gap-4 mt-10 items-center justify-center">
               <Link
-                href="/clients"
-                className="group flex-1 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl border-2 border-accent/50 bg-accent/10 text-accent font-bold uppercase tracking-wide text-base hover:bg-accent hover:text-surface hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-500 backdrop-blur-sm"
+                href={`/${lang}/clients/${clientSlug}/#videos`}
+                className="group flex-1 justify-center items-center inline-flex  gap-3 px-8 py-4 rounded-2xl border-2 border-accent/50 bg-accent/10 text-accent font-bold uppercase tracking-wide text-base hover:bg-accent hover:text-surface hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-500 backdrop-blur-sm"
               >
-                See All Clients
+                <span>
+                  {(lang = "ar" ? "جميع الفيديوهات" : "See All Videos")}
+                </span>
+
                 <motion.span
                   className="h-3 w-3 rounded-full bg-accent"
                   whileHover={{ scale: 1.2, x: 4 }}
@@ -109,7 +113,7 @@ export default function ClientPage({ lang }) {
             animate={{ x: 0, opacity: 1 }}
             className="relative"
           >
-            <div className="relative w-full aspect-[4/3] lg:aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-xl group/media">
+            <div className="relative w-full aspect-[4/3] lg:aspect-[16/12] rounded-3xl overflow-hidden shadow-2xl border border-white/10 backdrop-blur-xl group/media">
               {isCurrentVideo ? (
                 <video
                   src={currentMedia}
@@ -133,7 +137,6 @@ export default function ClientPage({ lang }) {
                 {activeMediaIndex + 1} / {totalMedia}
               </div> */}
             </div>
-
             {/* Media navigation */}
             {/* {totalMedia > 1 && (
               <div className="flex gap-3 mt-6 justify-center">
@@ -156,12 +159,13 @@ export default function ClientPage({ lang }) {
 
       {clientVideos.length > 0 && (
         <motion.section
+          id="videos"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="py-20 px-6 lg:px-12 xl:px-24"
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-xs uppercase tracking-[0.45em] text-[color:var(--text-muted)]">
                 {lang === "ar" ? "كل الفيديوهات" : "All Videos"}
@@ -171,7 +175,7 @@ export default function ClientPage({ lang }) {
               </h3>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-2 md:gap-8">
               {clientVideos.map((videoSrc, index) => (
                 <motion.article
                   key={`${videoSrc}-${index}`}
@@ -184,7 +188,6 @@ export default function ClientPage({ lang }) {
                     <video
                       src={videoSrc}
                       className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
-                      muted
                       loop
                       playsInline
                       controls
@@ -193,6 +196,20 @@ export default function ClientPage({ lang }) {
                 </motion.article>
               ))}
             </div>
+          </div>
+          <div className="flex gap-4 mt-10 items-center justify-center">
+            <Link
+              href={`/${lang}/clients`}
+              className="group inline-flex  gap-3 px-8 py-4 rounded-2xl border-2 border-accent/50 bg-accent/10 text-accent font-bold uppercase tracking-wide text-base hover:bg-accent hover:text-surface hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-500 backdrop-blur-sm"
+            >
+              {console.log(lang)}
+              <span>{(lang = "ar" ? "جميع العملاء" : "See All Clients")}</span>
+
+              <motion.span
+                className="h-3 w-3 rounded-full bg-accent"
+                whileHover={{ scale: 1.2, x: 4 }}
+              />
+            </Link>
           </div>
         </motion.section>
       )}

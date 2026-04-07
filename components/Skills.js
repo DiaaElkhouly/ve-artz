@@ -7,8 +7,7 @@ import ScrollVelocity from "./ScrollVelocity";
 
 const labels = {
   en: {
-    title: "Skills",
-    subtitle: "Capabilities & Tools",
+    title: "Skills & Tools",
     core: "Core Skills",
     softwares: "Software",
     ai: "AI Tools",
@@ -107,9 +106,6 @@ export default function Skills({ lang = "en" }) {
           transition={{ duration: 0.6 }}
           className={`text-center mb-14 md:mb-16`}
         >
-          <p className=" text-sm uppercase tracking-[0.4em] text-[color:var(--text-muted)] mb-4">
-            {copy.subtitle}
-          </p>
           <h2 className="text-6xl md:text-7xl pb-3 font-bold bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl mb-3">
             {copy.title}
           </h2>

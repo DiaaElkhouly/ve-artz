@@ -14,7 +14,7 @@ const ClientCards = ({ clientId, lang }) => {
   const isArabic = lang === "ar";
   const mediaSrc = Array.isArray(client.image) ? client.image[0] : client.image;
   const isVideo =
-    typeof mediaSrc === "string" && /.(mp4|webm|ogg)$/i.test(mediaSrc);
+    typeof mediaSrc === "string" && /.(mp4|webm|ogg|m4v)$/i.test(mediaSrc);
   const videoRef = useRef(null);
 
   const handlePlay = () => videoRef.current?.play();
@@ -57,7 +57,7 @@ export default function ClientsGrid({ lang }) {
           >
             <Link
               scroll={true}
-              href="/clients"
+              href={`/${lang}/clients`}
               className="group inline-flex items-center gap-3 px-8 py-4 md:px-10 md:py-4.5 text-sm md:text-base font-black uppercase tracking-[0.25em] border-2 border-border bg-surface rounded-2xl backdrop-blur-xl shadow-xl transition-all duration-600 hover:border-accent/60 hover:bg-accent/5 hover:text-accent hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/30 focus-visible:ring-offset-4 focus-visible:ring-offset-surface\"
               aria-label="Browse all clients"
             >
@@ -72,13 +72,10 @@ export default function ClientsGrid({ lang }) {
         </motion.div>
 
         {/* Grid */}
-        <div className="flex flex-col gap-8">
+        <div className="grid grid-cols-2  gap-10">
           {featuredClients.map((client) => (
-            <div
-              key={client.id || client.slug || client.name}
-              className="grid grid-cols-2 md:grid-cols-2"
-            >
-              <motion.h1
+            <div key={client.id || client.slug || client.name} className="flex">
+              {/* <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -87,10 +84,10 @@ export default function ClientsGrid({ lang }) {
                   textShadow: "0 0 20px rgba(255,255,255,0.5)",
                   transition: { duration: 0 },
                 }}
-                className="flex justify-center items-center text-6xl md:text-7xl pb-3 font-bold bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl mb-3"
+                className="flex justify-center items-center text-5xl md:text-7xl pb-3 font-bold bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl mb-3"
               >
                 {client.name}
-              </motion.h1>
+              </motion.h1> */}
               <ClientCard
                 key={client.id}
                 clientId={client.id}
@@ -110,7 +107,7 @@ export default function ClientsGrid({ lang }) {
           className="mt-24 md:hidden flex justify-center"
         >
           <Link
-            href="/clients"
+            href={`/${lang}/clients`}
             className="group inline-flex items-center gap-3 px-10 py-4 text-base font-black uppercase tracking-[0.2em] border-2 border-border bg-surface rounded-2xl backdrop-blur-xl shadow-xl transition-all duration-600 hover:border-accent/60 hover:bg-accent/5 hover:text-accent hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/30 focus-visible:ring-offset-4 focus-visible:ring-offset-surface\"
             aria-label="Browse all clients (mobile)"
           >
