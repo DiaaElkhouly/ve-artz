@@ -53,7 +53,7 @@ export default function CustomCursor() {
   return (
     <div
       ref={cursorRef}
-      className="custom-cursor hidden md:block"
+      className="custom-cursor hidden lg:block"
       aria-hidden
     />
   );

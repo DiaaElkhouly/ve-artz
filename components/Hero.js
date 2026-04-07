@@ -54,15 +54,15 @@ export default function Hero({ lang }) {
             className={`text-4xl leading-[0.95] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-[color:var(--text)] ${isArabic ? "" : "display-font"}`}
           >
             {isArabic ? (
-              <>
+              <div className="text-5xl sm:text-6xl font-bold">
                 من
                 <motion.span
                   className="block text-[color:var(--accent)] hover-glow pt-6"
                   whileHover={{ scale: 1.02 }}
                 >
-                  أنا
+                  أكون
                 </motion.span>
-              </>
+              </div>
             ) : (
               <>
                 Who

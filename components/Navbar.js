@@ -143,8 +143,8 @@ export default function Navbar({
               onChange={toggleLang}
             />
             <label for="language-toggle"></label>
-            <span class="on">AR</span>
-            <span class="off">EN</span>
+            <span class="on">EN</span>
+            <span class="off">AR</span>
           </motion.div>
 
           {/* theme btn */}

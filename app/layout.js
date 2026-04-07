@@ -13,11 +13,11 @@ export const metadata = {
     "visual architecture",
     "motion design",
     "ve artz",
-    "omer salah",
+    "omar salah",
     "portfolio",
   ],
-  authors: [{ name: "Omer Salah" }],
-  creator: "Omer Salah",
+  authors: [{ name: "Omar Salah" }],
+  creator: "Omar Salah",
   publisher: "VE Artz",
   metadataBase: new URL("https://ve-arts.vercel.app"),
   icons: {
@@ -29,7 +29,7 @@ export const metadata = {
     url: "https://ve-arts.vercel.app",
     siteName: "VE Artz",
     title: "VE Artz - Video Editing & Visual Architecture",
-    description: `Omer Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
+    description: `Omar Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
     images: [
       {
         url: "/logo-light.jpg",
@@ -42,7 +42,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "VE Artz - Video Editing Portfolio",
-    description: `Omer Salah - Professional Video Editor and Visual Architect.`,
+    description: `Omar Salah - Professional Video Editor and Visual Architect.`,
     images: ["/logo-light.jpg"],
   },
   robots: {
