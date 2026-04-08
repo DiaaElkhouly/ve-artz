@@ -12,7 +12,10 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 import ClientCard from "@/components/ClientCard";
-import { clients, getGroupedClients } from "@/data/clients";
+import rawClients from "../../../data/clients.json";
+
+const getGroupedClients = () => rawClients.filter((c) => c.featured);
+const clients = rawClients;
 
 /**
  * ClientsPage component displays a page showing clients with language support

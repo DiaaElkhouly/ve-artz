@@ -5,7 +5,10 @@ import Image from "next/image";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import ClientCard from "./ClientCard";
-import { getClientById, getGroupedClients } from "../data/clients.js";
+import clients from "../data/clients.json";
+
+const getGroupedClients = () => clients.filter((c) => c.featured);
+const getClientById = (id) => clients.find((c) => c.id === id);
 
 const ClientCards = ({ clientId, lang }) => {
   const client = getClientById(clientId);
@@ -56,7 +59,7 @@ export default function ClientsGrid({ lang }) {
             className="flex  justify-center"
           >
             <Link
-              scroll={true}
+              scroll
               href={`/${lang}/clients`}
               className="group inline-flex items-center gap-3 px-8 py-4 md:px-10 md:py-4.5 text-sm md:text-base font-black uppercase tracking-[0.25em] border-2 border-border bg-surface rounded-2xl backdrop-blur-xl shadow-xl transition-all duration-600 hover:border-accent/60 hover:bg-accent/5 hover:text-accent hover:shadow-2xl hover:shadow-accent/20 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/30 focus-visible:ring-offset-4 focus-visible:ring-offset-surface\"
               aria-label="Browse all clients"

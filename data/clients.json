@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ve-artz",
+    "name": "VE Artz",
+    "slug": "ve-artz",
+    "image": ["/projects/Ve/1.m4v", "/projects/Ve/2.m4v", "/projects/Ve/3.m4v"],
+    "projectIds": ["ve-artz"],
+    "featured": true,
+    "title": "My projects"
+  },
+  {
+    "id": "ms-reem",
+    "name": "Ms Reem",
+    "slug": "ms-reem",
+    "image": [
+      "/projects/Reem/1.m4v",
+      "/projects/Reem/2.m4v",
+      "/projects/Reem/3.m4v",
+      "/projects/Reem/4.m4v",
+      "/projects/Reem/5.m4v"
+    ],
+    "projectIds": ["ms-reem"],
+    "featuredProjects": true,
+    "featured": true
+  },
+  {
+    "id": "editly",
+    "name": "Editly",
+    "slug": "editly",
+    "image": ["/projects/Editly/1.m4v", "/projects/Editly/2.m4v"],
+    "projectIds": ["editly"],
+    "featured": true
+  },
+  {
+    "id": "toothy",
+    "name": "Toothy",
+    "slug": "toothy",
+    "image": [
+      "/projects/Toothy/1.m4v",
+      "/projects/Toothy/2.m4v",
+      "/projects/Toothy/3.m4v",
+      "/projects/Toothy/4.m4v"
+    ],
+    "featured": true
+  },
+  {
+    "id": "expro",
+    "name": "Expro",
+    "slug": "expro",
+    "image": ["/projects/Expro/1.m4v"],
+    "featured": true
+  },
+  {
+    "id": "dr-zinab",
+    "name": "Dr Zinab",
+    "slug": "Dr-Zinab",
+    "image": ["/projects/Dr.Zinab/1.m4v"],
+    "featured": true
+  }
+]

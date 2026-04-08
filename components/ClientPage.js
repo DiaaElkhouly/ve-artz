@@ -7,7 +7,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import { getClientBySlug } from "../data/clients.js";
+import clients from "../data/clients.json";
+
+const getClientBySlug = (slug) => clients.find((c) => c.slug === slug);
 
 export default function ClientPage({ lang }) {
   const routerParams = useParams();

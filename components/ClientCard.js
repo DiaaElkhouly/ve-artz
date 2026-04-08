@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { getClientById } from "../data/clients.js";
+import clients from "../data/clients.json";
+
+const getClientById = (id) => clients.find((c) => c.id === id);
 
 export default function ClientCard({ clientId, lang, variant = "teaser" }) {
   const client = getClientById(clientId);
