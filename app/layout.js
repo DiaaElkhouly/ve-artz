@@ -85,7 +85,6 @@ export default async function RootLayout({ children, params }) {
         >
           <div className="site-grid-content">
             {children}
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-[color:var(--border)] to-transparent my-24 mx-auto max-w-6xl" />
             <Footer lang={lang} />
           </div>
         </ThemeProvider>
