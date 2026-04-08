@@ -113,8 +113,6 @@ export default function Skills({ lang = "en" }) {
         </motion.div>
 
         <div className={`relative`}>
-          <div className="absolute -left-px -right-px top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(17,19,24,0.2),transparent)] [data-theme=dark]:bg-[linear-gradient(90deg,transparent,rgba(248,247,242,0.2),transparent)]" />
-
           <div className="space-y-4 md:space-y-5">
             <p className="mb-2 text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] text-center">
               {copy.core}

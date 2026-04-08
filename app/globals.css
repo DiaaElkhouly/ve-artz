@@ -61,7 +61,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  behavior: smooth;
 }
 
 body {
@@ -892,12 +892,26 @@ label:hover,
   transform: translateY(-50%);
 }
 
-/* Pixel Perfect Lang Button */
+/* Pixel Perfect Lang Button - Enhanced */
+@keyframes knob-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .switch-lang {
-  --knob-size: 1.25rem;
-  --track-height: 1.75rem;
-  --track-width: 3.5rem;
-  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --knob-size: 1.5rem;
+  --track-height: 2rem;
+  --track-width: 4rem;
+  --transition: 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   position: relative;
   display: inline-flex;
@@ -906,27 +920,52 @@ label:hover,
   height: var(--track-height);
   padding: 0.1875rem;
   border-radius: 9999px;
-  background: color-mix(in srgb, var(--surface-2) 92%, var(--border));
-  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--surface-2) 95%, transparent), color-mix(in srgb, var(--surface) 98%, var(--border)));
+  border: 1px solid color-mix(in srgb, var(--border) 65%, transparent);
   box-shadow:
-    0 4px 12px -6px color-mix(in srgb, var(--accent) 15%, transparent),
-    inset 0 1px 1px color-mix(in srgb, var(--surface) 90%, transparent),
-    0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    0 4px 14px -6px color-mix(in srgb, var(--accent) 18%, transparent),
+    inset 0 1px 2px color-mix(in srgb, var(--surface) 92%, transparent),
+    0 1px 3px -1px rgba(0, 0, 0, 0.06);
   transition: all var(--transition);
   overflow: hidden;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+}
+
+.switch-lang::after {
+  content: "";
+  position: absolute;
+  inset: 0.125rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.06));
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .switch-lang:hover {
-  transform: translateY(-0.5px);
-  box-shadow:
-    0 8px 20px -10px color-mix(in srgb, var(--accent) 25%, transparent),
-    inset 0 1px 2px color-mix(in srgb, var(--surface) 90%, transparent),
-    0 1px 3px -1px rgba(0, 0, 0, 0.08);
+  transform: translateY(-0.625px);
+  box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--accent) 30%, transparent), inset 0 1px 3px color-mix(in srgb, var(--surface) 92%, transparent), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-0.625px);
+  -moz-transform: translateY(-0.625px);
+  -ms-transform: translateY(-0.625px);
+  -o-transform: translateY(-0.625px);
 }
 
 .switch-lang:active {
-  transform: translateY(0);
+  transform: translateY(-0.125px);
+  box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 1px 2px color-mix(in srgb, var(--surface) 88%, transparent);
+  -webkit-transform: translateY(-0.125px);
+  -moz-transform: translateY(-0.125px);
+  -ms-transform: translateY(-0.125px);
+  -o-transform: translateY(-0.125px);
+}
+
+[data-theme="dark"] .switch-lang {
+  background: linear-gradient(145deg, color-mix(in srgb, var(--surface-2) 88%, transparent), color-mix(in srgb, var(--surface) 95%, var(--border)));
+  border-color: color-mix(in srgb, var(--border) 70%, transparent);
+  box-shadow:
+    0 4px 14px -6px color-mix(in srgb, var(--accent) 25%, transparent),
+    inset 0 1px 2px color-mix(in srgb, var(--surface) 85%, transparent),
+    0 1px 3px -1px rgba(0, 0, 0, 0.4);
 }
 
 .switch-lang input {
@@ -941,11 +980,11 @@ label:hover,
   position: relative;
   width: calc(var(--track-width) - 0.25rem);
   height: calc(var(--track-height) - 0.25rem);
-  background: color-mix(in srgb, var(--surface-2) 95%, var(--accent-strong));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--surface-2) 92%, var(--accent-strong)), color-mix(in srgb, var(--accent-strong) 98%, var(--surface-2)));
   border-radius: 9999px;
   cursor: pointer;
-  transition: background-color var(--transition);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .switch-lang label::before {
@@ -955,9 +994,9 @@ label:hover,
   left: 0.0625rem;
   right: 0.0625rem;
   bottom: 0.0625rem;
-  background: color-mix(in srgb, var(--surface-2) 95%, var(--accent-strong));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--surface-2) 92%, var(--accent-strong)), var(--accent-strong));
   border-radius: 9999px;
-  transition: background-color var(--transition);
+  transition: all var(--transition);
 }
 
 .switch-lang label::after {
@@ -970,73 +1009,77 @@ label:hover,
   background: var(--surface-2);
   border-radius: 50%;
   box-shadow:
-    0 4px 10px -4px color-mix(in srgb, var(--foreground) 20%, transparent),
-    inset 0 1px 1px rgba(255, 255, 255, 0.8),
-    0 0 0 0.0625rem color-mix(in srgb, var(--border) 60%, transparent),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    0 6px 12px -4px color-mix(in srgb, var(--foreground) 25%, transparent),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9),
+    0 0 0 0.0625rem color-mix(in srgb, var(--border) 65%, transparent),
+    0 2px 5px -2px rgba(0, 0, 0, 0.12);
   transition: all var(--transition);
+  animation: knob-pop 0.4s ease;
 }
 
 .switch-lang input:checked+label {
-  background: color-mix(in srgb, var(--accent) 85%, var(--accent-strong));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 88%, var(--accent-strong)), var(--accent));
 }
 
 .switch-lang input:checked+label::before {
-  background: color-mix(in srgb, var(--accent) 90%, var(--accent-strong));
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 92%, var(--accent-strong)), color-mix(in srgb, var(--accent) 85%, transparent));
 }
 
 .switch-lang input:checked+label::after {
-  margin-left: calc(var(--track-width) - 0.375rem - var(--knob-size));
+  margin-left: calc(var(--track-width) - 0.65rem - var(--knob-size));
   box-shadow:
-    0 4px 10px -4px color-mix(in srgb, var(--accent) 30%, transparent),
-    inset 0 1px 1px rgba(255, 255, 255, 0.9),
-    0 0 0 0.0625rem color-mix(in srgb, var(--accent) 50%, transparent);
+    0 6px 16px -4px color-mix(in srgb, var(--accent) 35%, transparent),
+    inset 0 1px 3px rgba(255, 255, 255, 1),
+    0 0 0 0.0625rem color-mix(in srgb, var(--accent) 60%, transparent),
+    0 0 12px color-mix(in srgb, var(--accent) 25%, transparent);
+  animation: knob-pop 0.4s ease;
 }
 
 .switch-lang>span {
   position: absolute;
   pointer-events: none;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.25;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.6875rem;
+  line-height: 1.2;
   text-transform: uppercase;
-  letter-spacing: 0.0625em;
+  letter-spacing: 0.075em;
   width: 42%;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  text-shadow: none;
-  font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  z-index: 1;
+  z-index: 2;
 }
 
 .switch-lang>span.on {
-  left: 0.125rem;
-  color: color-mix(in srgb, var(--accent-strong) 90%, transparent);
+  left: 0.1875rem;
+  color: color-mix(in srgb, var(--accent-strong) 92%, transparent);
+  font-variation-settings: "wght" 800;
 }
 
 .switch-lang>span.off {
-  right: 0.125rem;
-  color: color-mix(in srgb, var(--accent) 85%, transparent);
+  right: 0.1875rem;
+  color: color-mix(in srgb, var(--accent) 82%, transparent);
+  font-variation-settings: "wght" 800;
 }
 
 .switch-lang input:checked~span.off {
-  color: color-mix(in srgb, var(--accent) 90%, transparent);
+  color: color-mix(in srgb, var(--accent) 95%, var(--surface-2));
 }
 
 .switch-lang input:checked~span.on {
   color: var(--surface-2);
+  text-shadow: 0 1px 2px color-mix(in srgb, var(--accent-strong) 50%, transparent);
 }
 
 /* Focus ring */
 .switch-lang:focus-within {
   outline: none;
   box-shadow:
-    0 0 0 0.1875rem color-mix(in srgb, var(--accent) 50%, transparent),
-    0 8px 20px -8px color-mix(in srgb, var(--accent) 20%, transparent);
+    0 0 0 0.25rem color-mix(in srgb, var(--accent) 55%, transparent),
+    0 12px 28px -12px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
 /* Reduced motion */
@@ -1045,21 +1088,27 @@ label:hover,
   .switch-lang,
   .switch-lang label::after {
     transition: none;
+    animation: none;
   }
 }
 
 /* RTL support */
 [dir="rtl"] .switch-lang>span.on {
-  right: 0.125rem;
+  right: 0.1875rem;
   left: auto;
 }
 
 [dir="rtl"] .switch-lang>span.off {
-  left: 0.125rem;
+  left: 0.1875rem;
   right: auto;
 }
 
 [dir="rtl"] .switch-lang input:checked+label::after {
   margin-left: 0.125rem;
   margin-right: calc(var(--track-width) - 0.375rem - var(--knob-size));
+}
+
+/* Hide check-toggle class styles if conflicting */
+.check-toggle {
+  appearance: none;
 }

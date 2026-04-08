@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import ClientCard from "./ClientCard";
@@ -78,19 +77,6 @@ export default function ClientsGrid({ lang }) {
         <div className="grid grid-cols-2  gap-10">
           {featuredClients.map((client) => (
             <div key={client.id || client.slug || client.name} className="flex">
-              {/* <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                whileHover={{
-                  scale: 1.05,
-                  textShadow: "0 0 20px rgba(255,255,255,0.5)",
-                  transition: { duration: 0 },
-                }}
-                className="flex justify-center items-center text-5xl md:text-7xl pb-3 font-bold bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl mb-3"
-              >
-                {client.name}
-              </motion.h1> */}
               <ClientCard
                 key={client.id}
                 clientId={client.id}

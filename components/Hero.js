@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import HeroImageCut from "./HeroImageCut";
 
 const enText = `I'm Omvr Salah, a Video Editor and Visual Architect focused on creating clear and engaging visual experiences. My work is centered around shaping ideas into visual stories through editing, rhythm, and thoughtful visual structure.`;
@@ -42,14 +41,6 @@ export default function Hero({ lang }) {
         <div
           className={`${isArabic ? "font-arabic text-right lg:[direction:ltr] order-2 md:order-1" : "order-1"}`}
         >
-          {/* not needed */}
-          {/* <motion.div
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[color:var(--border)] bg-[color:var(--surface-90)] px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--text-muted)] hover-glow hover-lift"
-            whileHover={{ scale: 1.05 }}
-          >
-            <motion.span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)] animate-ping" />
-            {isArabic ? "علامة تحرير فيديو" : "Video Editing Brand"}
-          </motion.div> */}
           <h1
             className={`text-4xl leading-[0.95] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-[color:var(--text)] ${isArabic ? "" : "display-font"}`}
           >

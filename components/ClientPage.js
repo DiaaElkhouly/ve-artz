@@ -1,8 +1,8 @@
 "use client";
 
 import Navbar from "./Navbar";
-import { ChevronLeft, Play, Image as ImageIcon } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, Image as ImageIcon } from "lucide-react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -98,7 +98,7 @@ export default function ClientPage({ lang }) {
                 className="group flex-1 justify-center items-center inline-flex  gap-3 px-8 py-4 rounded-2xl border-2 border-accent/50 bg-accent/10 text-accent font-bold uppercase tracking-wide text-base hover:bg-accent hover:text-surface hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-500 backdrop-blur-sm"
               >
                 <span>
-                  {(lang = "ar" ? "جميع الفيديوهات" : "See All Videos")}
+                  {(lang == "ar" ? "جميع الفيديوهات" : "See All Videos")}
                 </span>
 
                 <motion.span
@@ -134,27 +134,7 @@ export default function ClientPage({ lang }) {
                   className="object-cover group-hover/media:scale-105 transition-transform duration-700"
                 />
               )}
-              {/* Media counter */}
-              {/* <div className="absolute top-6 right-6 bg-black/60 backdrop-blur-md px-4 py-2 rounded-2xl text-white/90 font-mono text-sm border border-white/20">
-                {activeMediaIndex + 1} / {totalMedia}
-              </div> */}
             </div>
-            {/* Media navigation */}
-            {/* {totalMedia > 1 && (
-              <div className="flex gap-3 mt-6 justify-center">
-                {Array.from({ length: totalMedia }, (_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveMediaIndex(i)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      i === activeMediaIndex
-                        ? "bg-accent scale-125 shadow-lg"
-                        : "bg-white/40 hover:bg-white/60"
-                    }`}
-                  />
-                ))}
-              </div>
-            )} */}
           </motion.div>
         </div>
       </motion.section>
@@ -205,7 +185,7 @@ export default function ClientPage({ lang }) {
               className="group inline-flex  gap-3 px-8 py-4 rounded-2xl border-2 border-accent/50 bg-accent/10 text-accent font-bold uppercase tracking-wide text-base hover:bg-accent hover:text-surface hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-500 backdrop-blur-sm"
             >
               {console.log(lang)}
-              <span>{(lang = "ar" ? "جميع العملاء" : "See All Clients")}</span>
+              <span>{(lang == "ar" ? "جميع العملاء" : "See All Clients")}</span>
 
               <motion.span
                 className="h-3 w-3 rounded-full bg-accent"

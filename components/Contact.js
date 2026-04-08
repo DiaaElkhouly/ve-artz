@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Send, MessageCircle, Mail, Phone } from "lucide-react";
+import { Send, Mail, Phone } from "lucide-react";
 import {
   FaFacebook,
   FaInstagram,
