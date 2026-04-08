@@ -117,9 +117,9 @@ export default function Skills({ lang = "en" }) {
             <p className="mb-2 text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] text-center">
               {copy.core}
             </p>
-            <div className="relative rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/70 px-4 py-4 md:px-6 md:py-5 overflow-hidden">
+            <div className="relative rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/70  py-4 md:px-6 md:py-5 overflow-hidden">
               <div
-                className={`relative h-11 md:h-18 pointer-events-none overflow-hidden [mask-image:linear-gradient("90deg",transparent,black_10%,black_90%,transparent)]`}
+                className={`relative h-4 md:h-18 pointer-events-none overflow-hidden [mask-image:linear-gradient("90deg",transparent,black_10%,black_90%,transparent)]`}
               >
                 <ScrollVelocity
                   texts={[coreList.join(" • ")]}
@@ -136,9 +136,9 @@ export default function Skills({ lang = "en" }) {
             <p className="mb-2 text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] text-center">
               {copy.softwares}
             </p>
-            <div className="relative uppercase rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/70 px-4 py-4 md:px-6 md:py-5 overflow-hidden">
+            <div className="relative uppercase rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/70  py-4 md:px-6 md:py-5 overflow-hidden">
               <div
-                className={` relative h-11 md:h-18 pointer-events-none overflow-hidden [mask-image:linear-gradient("90deg",transparent,black_10%,black_90%,transparent)]`}
+                className={` relative h-4 md:h-18 pointer-events-none overflow-hidden [mask-image:linear-gradient("90deg",transparent,black_10%,black_90%,transparent)]`}
               >
                 <ScrollVelocity
                   texts={[softwaresList.join(" • ")]}
@@ -155,9 +155,9 @@ export default function Skills({ lang = "en" }) {
             <p className="mb-2 text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] text-center">
               {copy.ai}
             </p>
-            <div className="relative rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/70 px-4 py-4 md:px-6 md:py-5 overflow-hidden">
+            <div className="relative rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]/70 py-4 md:px-6 md:py-5 overflow-hidden">
               <div
-                className={`relative h-11 md:h-18 pointer-events-none overflow-hidden [mask-image:linear-gradient("90deg",transparent,black_10%,black_90%,transparent)]`}
+                className={`relative h-4 md:h-18 pointer-events-none overflow-hidden [mask-image:linear-gradient("90deg",transparent,black_10%,black_90%,transparent)]`}
               >
                 <ScrollVelocity
                   texts={[aiList.join(" • ")]}
