@@ -60,11 +60,11 @@ export default function Navbar({
 
   const sections = isArabic
     ? [
-        { id: "hero", label: "الرئيسية" },
-        { id: "skills", label: "المهارات" },
-        { id: "clients", label: "العملاء" },
-        { id: "about", label: "من نحن" },
-        { id: "contact", label: "تواصل" },
+      { id: "contact", label: "تواصل" },
+      { id: "about", label: "من نحن" },
+      { id: "clients", label: "العملاء" },
+      { id: "skills", label: "المهارات" },
+      { id: "hero", label: "الرئيسية" },
       ]
     : [
         { id: "hero", label: "Home" },
