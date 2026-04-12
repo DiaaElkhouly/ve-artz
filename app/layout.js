@@ -24,7 +24,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ve-arts.vercel.app",
+    url: "https://ve-arts.vercel.app/",
     siteName: "VE Artz",
     title: "VE Artz - Video Editing & Visual Architecture",
     description: `Omar Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
@@ -55,7 +55,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: "your-google-site-verification-code",
+    // google: "your-google-site-verification-code",
   },
 };
 

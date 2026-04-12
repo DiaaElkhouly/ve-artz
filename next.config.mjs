@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false,
   images: {
     formats: ["image/webp", "image/avif"],
     remotePatterns: [
@@ -13,7 +14,6 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
-    // ppr: "incremental", // Updated to cacheComponents in newer Next.js
   },
   reactCompiler: true,
   compiler: {

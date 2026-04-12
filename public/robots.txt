@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ve-artz-omar-salah.vercel.app/sitemap.xml
