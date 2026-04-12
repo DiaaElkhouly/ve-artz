@@ -68,7 +68,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  cursor: none !important;
+  /* cursor: none !important; that to remove cursor to add custom Cursor  */ 
   overflow-x: hidden;
 }
 
@@ -96,7 +96,7 @@ body {
   z-index: 1;
 }
 
-a,
+/* a,
 button,
 input,
 textarea,
@@ -104,15 +104,15 @@ select,
 label,
 [role="button"] {
   cursor: none !important;
-}
+} */
 
-*,
+/* *,
 *::before,
 *::after {
   cursor: none !important;
-}
+} */
 
-a:hover,
+/* a:hover,
 button:hover,
 input:hover,
 textarea:hover,
@@ -120,7 +120,7 @@ select:hover,
 label:hover,
 [role="button"]:hover {
   cursor: none !important;
-}
+} */
 
 .display-font {
   font-family: var(--font-display);

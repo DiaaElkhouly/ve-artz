@@ -19,10 +19,8 @@ export const metadata = {
   authors: [{ name: "Omar Salah" }],
   creator: "Omar Salah",
   publisher: "VE Artz",
-  metadataBase: new URL("https://ve-arts.vercel.app"),
-  icons: {
-    icon: { url: "/logo-dark.jpg", type: "image/jpg" },
-  },
+  metadataBase: new URL("https://ve-artz-omar-salah.vercel.app"),
+  icons: "@/logo-dark.jpg",
   openGraph: {
     type: "website",
     locale: "en_US",

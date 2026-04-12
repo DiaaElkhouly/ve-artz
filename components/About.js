@@ -59,9 +59,7 @@ export default function About({ lang }) {
           className={`${lang === "ar" ? "font-arabic text-right" : ""}`}
         >
           <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl">
-            {lang === "ar"
-              ? "اشعر بالرؤية - اشعر بالفنون"
-              : "Feel the Vision - Feel the Artz"}
+            Feel the Vision - Feel the Artz
           </p>
           <h2 className="mt-3 text-4xl font-semibold text-[color:var(--text)] md:text-5xl lg:text-6xl\">
             {lang === "ar" ? "عن" : "About"}

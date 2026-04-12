@@ -9,7 +9,7 @@ export default function ClientDetailPage() {
       <ClientPage lang="en" />
       <About />
       <Contact />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
     </>
   );
 }

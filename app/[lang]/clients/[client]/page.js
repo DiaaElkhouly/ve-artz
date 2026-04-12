@@ -25,7 +25,7 @@ export default function ClientDetailPage() {
       <ClientPage lang={lang} />
       <About lang={lang} />
       <Contact lang={lang} />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
     </>
   );
 }

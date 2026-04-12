@@ -111,7 +111,7 @@ export default function ClientsPage() {
         </section>
         <About lang={lang} />
         <Contact lang={lang} />
-        <CustomCursor />
+        {/* <CustomCursor /> */}
       </main>
     </>
   );

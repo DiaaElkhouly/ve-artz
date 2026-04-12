@@ -48,9 +48,8 @@ export default function HomePage() {
         <Skills lang={lang} />
         <ClientsGrid lang={lang} />
         <About lang={lang} />
-        <CustomCursor />
         <Contact lang={lang} />
-        <CustomCursor />
+        {/* <CustomCursor /> */}
       </main>
     </div>
   );

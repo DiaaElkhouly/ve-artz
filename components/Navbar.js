@@ -60,11 +60,11 @@ export default function Navbar({
 
   const sections = isArabic
     ? [
-      { id: "contact", label: "تواصل" },
-      { id: "about", label: "من نحن" },
-      { id: "clients", label: "العملاء" },
-      { id: "skills", label: "المهارات" },
-      { id: "hero", label: "الرئيسية" },
+        { id: "contact", label: "تواصل" },
+        { id: "about", label: "من نحن" },
+        { id: "clients", label: "العملاء" },
+        { id: "skills", label: "المهارات" },
+        { id: "hero", label: "الرئيسية" },
       ]
     : [
         { id: "hero", label: "Home" },
@@ -99,9 +99,7 @@ export default function Navbar({
           <span className="hidden lg:block text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text-muted)]">
             VE ARTZ
             <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl">
-              {lang === "ar"
-                ? "اشعر بالرؤية - اشعر بالفنون"
-                : "Feel the Vision - Feel the Artz"}
+              Feel the Vision - Feel the Artz
             </p>
           </span>
         </Link>
@@ -191,7 +189,6 @@ export default function Navbar({
               </div>
             </div>
           </label>
-
 
           <button
             className="lg:hidden rounded-xl p-3 transition-all duration-300 ease-out hover:bg-[color:var(--surface-2)] active:scale-[0.96]"
