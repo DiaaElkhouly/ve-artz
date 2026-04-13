@@ -72,6 +72,11 @@ export default async function RootLayout({ children, params }) {
     <html lang={lang} dir={dir} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo-dark.jpg" />
+        <link rel="canonical" href="https://ve-artz-omar-salah.vercel.app" />
+        <meta
+          name="google-site-verification"
+          content="rYX0YRTNdM-PjUdhQS5AbbuXmjI7lPXJ5BfQcwzLu4Q"
+        />
       </head>
       <body className="antialiased site-grid">
         <ThemeProvider
