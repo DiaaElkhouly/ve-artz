@@ -23,9 +23,11 @@ export default function Hero({ lang }) {
       className="relative overflow-hidden px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-20 sm:py-20 md:py-24 lg:py-28"
     >
       <div
-        className={`relative z-10 grid grid-cols-1 md:grid-cols-2  gap-8 md:gap-12 lg:gap-16 xl:gap-24 items-stretch lg:items-center w-full ${isArabic ? "lg:[direction:rtl]" : "lg:[direction:ltr]"}`}
+        className={`relative z-10 grid grid-cols-1 md:grid-cols-1  gap-8 md:gap-12 lg:gap-16 xl:gap-24 items-stretch lg:items-center w-full ${isArabic ? "lg:[direction:rtl]" : "lg:[direction:ltr]"}`}
       >
-        <div className="hidden md:block relative lg:[direction:ltr] order-2 md:order-2">
+        {/*change the grid-cols-1 to grid-cols-2 when add img */}
+
+        {/* <div className="hidden md:block relative lg:[direction:ltr] order-2 md:order-2">
           <div className="absolute -left-8 top-10 h-40 w-40 rounded-full bg-[color:var(--glow-1)] blur-3xl" />
           <div className="absolute -right-10 bottom-10 h-48 w-48 rounded-full bg-[color:var(--glow-2)] blur-3xl" />
 
@@ -37,7 +39,7 @@ export default function Hero({ lang }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div
           className={`${isArabic ? "font-arabic text-right lg:[direction:ltr] order-2 md:order-1" : "order-1"}`}
         >
