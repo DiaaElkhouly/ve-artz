@@ -30,8 +30,8 @@ export default function HeroImageCut({ className = "" }) {
       transition={{ type: "spring", stiffness: 260, damping: 18 }}
     >
       <Image
-        src="/omer-salah.jpeg"
-        alt="Omer Salah"
+        src="/omar-salah.png"
+        alt="Omar Salah"
         fill
         sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
         className="object-cover w-full h-full rounded-3xl object-center group-hover:scale-105 group-hover:blur-[1px] transition-all duration-500"
