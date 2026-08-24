@@ -84,8 +84,8 @@ export default function Footer({ lang }) {
                 height="40"
                 className="rounded-2xl object-contain"
               />
-              <span className="hidden lg:block text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text-muted)]">
-                VE ARTZ
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text-muted)]">
+                OMVR SALAH
               </span>
             </Link>
           </div>
@@ -178,7 +178,7 @@ export default function Footer({ lang }) {
       </div>
 
       <div className="flex justify-between relative  mt-12 w-full border-t border-[color:var(--border)] pt-6 text-xs text-[color:var(--text-muted)]">
-        © {year} VE ARTS.{" "}
+        © {year} OMVR SALAH.{" "}
         {isArabic ? "كل الحقوق محفوظة" : "All rights reserved."}
         <div>
           {isArabic ? (

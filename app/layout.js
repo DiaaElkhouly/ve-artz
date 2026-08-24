@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: {
-    default: "VE Artz || OMVR SALAH",
+    default: "OMVR SALAH",
     template: "%s | VE Artz",
   },
   description: `Omar Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories with cinematic rhythm and refined design.`,
@@ -25,21 +25,21 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ve-arts.vercel.app/",
-    siteName: "VE Artz",
-    title: "VE Artz - Video Editing & Visual Architecture",
-    description: `Omar Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
+    siteName: "Omvr Salah",
+    title: "Omvr Salah - Video Editing & Visual Architecture",
+    description: `Omvr Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
     images: [
       {
         url: "/logo-light.jpg",
         width: 1200,
         height: 630,
-        alt: "VE Artz Portfolio",
+        alt: "Omvr Salah Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VE Artz - Video Editing Portfolio",
+    title: "Omvr Salah - Video Editing Portfolio",
     description: `Omar Salah - Professional Video Editor and Visual Architect.`,
     images: ["/logo-light.jpg"],
   },

@@ -96,9 +96,9 @@ export default function Navbar({
             height="40"
             className="rounded-2xl object-contain"
           />
-          <span className="hidden lg:block text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--text-muted)]">
-            VE ARTZ
-            <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl">
+          <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[color:var(--text-muted)]">
+            OMVR SALAH
+            <p className="hidden lg:block text-xs uppercase tracking-[0.35em] text-[color:var(--text-muted)] bg-gradient-to-r from-[color:var(--text)] via-[color:var(--accent)] to-[color:var(--text)] bg-clip-text text-transparent drop-shadow-2xl">
               Feel the Vision - Feel the Artz
             </p>
           </span>
