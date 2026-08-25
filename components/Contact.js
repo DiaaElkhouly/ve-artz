@@ -166,7 +166,7 @@ export default function Contact({ lang }) {
                     className="text-[color:var(--accent)] group-hover:scale-110 transition-transform"
                   />
                   <p className="text-sm text-[color:var(--text-muted)] mt-2 font-medium">
-                    @ve.artz (Facebook)
+                    @Omvr Salah (Facebook)
                   </p>
                 </a>
                 <a
@@ -180,7 +180,7 @@ export default function Contact({ lang }) {
                     className="text-[color:var(--accent)] group-hover:scale-110 transition-transform"
                   />
                   <p className="text-sm text-[color:var(--text-muted)] mt-2 font-medium">
-                    @ve.artz (Instagram)
+                    @Omvr Salah (Instagram)
                   </p>
                 </a>
                 <a
@@ -194,7 +194,7 @@ export default function Contact({ lang }) {
                     className="text-[color:var(--accent)] group-hover:scale-110 transition-transform"
                   />
                   <p className="text-sm text-[color:var(--text-muted)] mt-2 font-medium">
-                    @ve.artz (TikTok)
+                    @Omvr Salah (TikTok)
                   </p>
                 </a>
                 <a
@@ -208,7 +208,7 @@ export default function Contact({ lang }) {
                     className="text-[color:var(--accent)] group-hover:scale-110 transition-transform"
                   />
                   <p className="text-sm text-[color:var(--text-muted)] mt-2 font-medium">
-                    @Ve_Artz1 (X)
+                    @Omvr Salah (X)
                   </p>
                 </a>
               </div>

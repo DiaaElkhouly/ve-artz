@@ -19,12 +19,12 @@ export const metadata = {
   authors: [{ name: "Omar Salah" }],
   creator: "Omar Salah",
   publisher: "VE Artz",
-  metadataBase: new URL("https://ve-artz-omar-salah.vercel.app"),
+  metadataBase: new URL("https://omvr-salah.vercel.app"),
   icons: "@/logo-dark.jpg",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ve-arts.vercel.app/",
+    url: "https://omvr-salah.vercel.app/",
     siteName: "Omvr Salah",
     title: "Omvr Salah - Video Editing & Visual Architecture",
     description: `Omvr Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
@@ -72,7 +72,7 @@ export default async function RootLayout({ children, params }) {
     <html lang={lang} dir={dir} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo-dark.jpg" />
-        <link rel="canonical" href="https://ve-artz-omar-salah.vercel.app" />
+        <link rel="canonical" href="https://omvr-salah.vercel.app" />
         <meta
           name="google-site-verification"
           content="rYX0YRTNdM-PjUdhQS5AbbuXmjI7lPXJ5BfQcwzLu4Q"

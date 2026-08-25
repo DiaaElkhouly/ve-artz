@@ -90,7 +90,8 @@ export default function Navbar({
       <div className="mx-auto flex max-w-6xl items-center justify-between">
         <Link href={homeHref} className="flex items-center gap-3">
           <Image
-            src={theme === "light" ? "/logo-light.jpg" : "/logo-dark.jpg"}
+            // src={theme === "light" ? "/logo-light.jpg" : "/logo-dark.jpg"}
+            src="/omar-salah.png"
             alt="Logo"
             width="40"
             height="40"

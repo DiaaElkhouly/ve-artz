@@ -35,7 +35,8 @@ export default function About({ lang }) {
             <div className="absolute inset-0 bg-[color:var(--accent)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400 rounded-3xl" />
             <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[28rem] 2xl:h-[32rem] rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] group-hover:scale-[1.02] transition-transform duration-500">
               <Image
-                src={theme === "light" ? "/logo-dark.jpg" : "/logo-light.jpg"}
+                // src={theme === "light" ? "/logo-dark.jpg" : "/logo-light.jpg"}
+                src="/omar-salah.png"
                 alt="VE Artz Logo"
                 fill
                 className="h-full w-full object-cover rounded-2xl"
