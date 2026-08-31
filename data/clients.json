@@ -3,7 +3,13 @@
     "id": "ve-artz",
     "name": "VE Artz",
     "slug": "ve-artz",
-    "image": ["/projects/Ve/1.m4v", "/projects/Ve/2.m4v", "/projects/Ve/3.m4v"],
+    "image": [
+      "/projects/Ve/1.m4v",
+      "/projects/Ve/2.m4v",
+      "/projects/Ve/3.m4v",
+      "/projects/Ve/4.m4v",
+      "/projects/Ve/5.m4v"
+    ],
     "projectIds": ["ve-artz"],
     "featured": true,
     "title": "My projects"
@@ -55,6 +61,13 @@
     "name": "Dr Zinab",
     "slug": "Dr-Zinab",
     "image": ["/projects/Dr.Zinab/1.m4v"],
+    "featured": true
+  },
+  {
+    "id": "mostafa-hamze",
+    "name": "Mostafa Hamze",
+    "slug": "Mostafa-Hamze",
+    "image": ["/projects/mostafa/1.m4v"],
     "featured": true
   }
 ]

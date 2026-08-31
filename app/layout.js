@@ -20,7 +20,7 @@ export const metadata = {
   creator: "Omar Salah",
   publisher: "VE Artz",
   metadataBase: new URL("https://omvr-salah.vercel.app"),
-  icons: "@/logo-dark.jpg",
+  icons: "@/omar-salah.png",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata = {
     description: `Omvr Salah - Professional Video Editor and Visual Architect. Transforming ideas into engaging visual stories.`,
     images: [
       {
-        url: "/logo-light.jpg",
+        url: "/omar-salah.png",
         width: 1200,
         height: 630,
         alt: "Omvr Salah Portfolio",
@@ -41,7 +41,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Omvr Salah - Video Editing Portfolio",
     description: `Omar Salah - Professional Video Editor and Visual Architect.`,
-    images: ["/logo-light.jpg"],
+    images: ["/omar-salah.png"],
   },
   robots: {
     index: true,
